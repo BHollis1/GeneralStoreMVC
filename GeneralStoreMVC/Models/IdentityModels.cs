@@ -17,7 +17,6 @@ namespace GeneralStoreMVC.Models
             return userIdentity;
         }
     }
-
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -29,5 +28,6 @@ namespace GeneralStoreMVC.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Product> Products { get; set; }
     }
 }
