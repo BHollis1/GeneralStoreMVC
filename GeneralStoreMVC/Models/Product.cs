@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -9,7 +10,7 @@ namespace GeneralStoreMVC.Models
     public class Product
     {
         [Key]
-        public int ProductID { get; set; }
+        public int ID { get; set; }
         [Required]
         [Display(Name="Product Name")]
         public string Name { get; set; }
@@ -22,4 +23,5 @@ namespace GeneralStoreMVC.Models
         [Display(Name="It is food")]
         public bool IsFood { get; set; }
     }
+   
 }
